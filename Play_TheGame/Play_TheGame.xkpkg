@@ -1,0 +1,50 @@
+!Package
+Id: fa04e425-7f19-4d54-a069-7078b19b9531
+SerializedVersion: {Assets: 0.0.4}
+Meta:
+    Name: Play_TheGame
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: Play_TheGame
+    Dependencies:
+        -   Name: Xenko
+            Version: 2.0.4.1
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: Play_TheGame.Game/Effects
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 64a2fc6d-64bb-4978-aecb-655927111dcd
+                Location: Play_TheGame.Game/Play_TheGame.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 0f7b2ed7-d5ff-4c8b-9871-918081692295
+                Location: Play_TheGame.Windows/Play_TheGame.Windows.csproj
+                Type: Executable
+    -   Name: Linux
+        Platform: Linux
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Linux
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: afdaade0-975b-47c4-8cf9-2290ab6988a9
+                Location: Play_TheGame.Linux/Play_TheGame.Linux.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets: []
