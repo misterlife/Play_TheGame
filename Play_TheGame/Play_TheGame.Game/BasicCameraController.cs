@@ -44,8 +44,8 @@ namespace Play_TheGame
             // Configure touch input
             if (!Platform.IsWindowsDesktop)
             {
-                Input.ActivatedGestures.Add(new GestureConfigDrag());
-                Input.ActivatedGestures.Add(new GestureConfigComposite());
+                Input.Gestures.Add(new GestureConfigDrag());
+                Input.Gestures.Add(new GestureConfigComposite());
             }
         }
 
@@ -118,6 +118,7 @@ namespace Play_TheGame
             if (Input.IsMouseButtonDown(MouseButton.Right))
             {
                 Input.LockMousePosition();
+                Game.IsMouseVisible = false;
 
                 yaw = -Input.MouseDelta.X * MouseRotationSpeed.X;
                 pitch = -Input.MouseDelta.Y * MouseRotationSpeed.Y;
@@ -125,8 +126,9 @@ namespace Play_TheGame
             else
             {
                 Input.UnlockMousePosition();
+                Game.IsMouseVisible = true;
             }
-
+            
             // Handle gestures
             foreach (var gestureEvent in Input.GestureEvents)
             {

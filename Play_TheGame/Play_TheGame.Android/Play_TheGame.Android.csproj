@@ -4,13 +4,24 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F8008A0-F148-4332-8BCC-6FCCB57B4599}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{CD059B5C-F794-41C8-87EB-FA2DEA983D5F}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Play_TheGame</RootNamespace>
     <AssemblyName>Play_TheGame</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
     <SiliconStudioPackageGuid>{edbc9b49-cc40-4020-8ffb-d6428511bad6}</SiliconStudioPackageGuid>
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
@@ -20,63 +31,62 @@
     <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\Play_TheGame.xkpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Executable</SiliconStudioProjectType>
-    <SiliconStudioPlatform>Linux</SiliconStudioPlatform>
-    <SiliconStudioBuildProfile>Linux</SiliconStudioBuildProfile>
+    <SiliconStudioPlatform>Android</SiliconStudioPlatform>
+    <SiliconStudioBuildProfile>Android</SiliconStudioBuildProfile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Linux' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Android' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_UNIX;SILICONSTUDIO_PLATFORM_LINUX</DefineConstants>
-    <OutputPath>..\Bin\Linux\Debug\</OutputPath>
-    <IntermediateOutputPath>obj\Linux\Debug\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\Debug\</OutputPath>
+    <IntermediateOutputPath>obj\Android\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Linux' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Android' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_UNIX;SILICONSTUDIO_PLATFORM_LINUX</DefineConstants>
-    <OutputPath>..\Bin\Linux\Release\</OutputPath>
-    <IntermediateOutputPath>obj\Linux\Release\</IntermediateOutputPath>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\Release\</OutputPath>
+    <IntermediateOutputPath>obj\Android\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'CoreCLR_Release|Linux' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Testing|Android' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_UNIX;SILICONSTUDIO_PLATFORM_LINUX</DefineConstants>
-    <OutputPath>..\Bin\Linux\CoreCLR_Release\</OutputPath>
-    <IntermediateOutputPath>obj\Linux\CoreCLR_Release\</IntermediateOutputPath>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\Testing\</OutputPath>
+    <IntermediateOutputPath>obj\Android\Testing\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SiliconStudioRuntime Condition="'$(SiliconStudioProjectType)' == 'Executable'">CoreCLR</SiliconStudioRuntime>
-    <SiliconStudioBuildDirExtension Condition="'$(SiliconStudioBuildDirExtension)' == ''">CoreCLR</SiliconStudioBuildDirExtension>
-    <DefineConstants>SILICONSTUDIO_RUNTIME_CORECLR;$(DefineConstants)</DefineConstants>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'CoreCLR_Debug|Linux' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_UNIX;SILICONSTUDIO_PLATFORM_LINUX</DefineConstants>
-    <OutputPath>..\Bin\Linux\CoreCLR_Debug\</OutputPath>
-    <IntermediateOutputPath>obj\Linux\CoreCLR_Debug\</IntermediateOutputPath>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|Android' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\AppStore\</OutputPath>
+    <IntermediateOutputPath>obj\Android\AppStore\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SiliconStudioRuntime Condition="'$(SiliconStudioProjectType)' == 'Executable'">CoreCLR</SiliconStudioRuntime>
-    <SiliconStudioBuildDirExtension Condition="'$(SiliconStudioBuildDirExtension)' == ''">CoreCLR</SiliconStudioBuildDirExtension>
-    <DefineConstants>SILICONSTUDIO_RUNTIME_CORECLR;$(DefineConstants)</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Condition="'$(SiliconStudioRuntime)' == ''" Include="System" />
-    <Reference Condition="'$(SiliconStudioRuntime)' == ''" Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Play_TheGame.Game\Play_TheGame.Game.csproj">
@@ -86,13 +96,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Play_TheGameApp.cs" />
+    <Compile Include="Play_TheGameActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+    <Compile Include="Resources\Resource.Designer.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Icon.ico" />
-  </ItemGroup>  
-  <Import Condition="'$(SiliconStudioRuntime)' == ''" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />
   <Import Project="$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets" Condition="Exists('$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets')" />
   <Target Name="EnsureSiliconStudioXenkoInstalled" BeforeTargets="PrepareForBuild">

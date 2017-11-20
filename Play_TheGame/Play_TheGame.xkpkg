@@ -1,5 +1,5 @@
 !Package
-Id: fa04e425-7f19-4d54-a069-7078b19b9531
+Id: edbc9b49-cc40-4020-8ffb-d6428511bad6
 SerializedVersion: {Assets: 0.0.4}
 Meta:
     Name: Play_TheGame
@@ -9,7 +9,7 @@ Meta:
     RootNamespace: Play_TheGame
     Dependencies:
         -   Name: Xenko
-            Version: 2.0.4.1
+            Version: 2.1.0.3
             RootAssets: []
 LocalDependencies: []
 Profiles:
@@ -21,7 +21,7 @@ Profiles:
             -   Path: Play_TheGame.Game/Effects
         OutputGroupDirectories: {}
         ProjectReferences:
-            -   Id: 64a2fc6d-64bb-4978-aecb-655927111dcd
+            -   Id: 286dc9b0-e79b-4d35-90ff-2428f9adccc1
                 Location: Play_TheGame.Game/Play_TheGame.Game.csproj
                 Type: Library
     -   Name: Windows
@@ -31,7 +31,7 @@ Profiles:
             -   Path: Assets/Windows
         OutputGroupDirectories: {}
         ProjectReferences:
-            -   Id: 0f7b2ed7-d5ff-4c8b-9871-918081692295
+            -   Id: d647de64-bf0c-4a9f-884a-0beb13be1802
                 Location: Play_TheGame.Windows/Play_TheGame.Windows.csproj
                 Type: Executable
     -   Name: Linux
@@ -41,8 +41,18 @@ Profiles:
             -   Path: Assets/Linux
         OutputGroupDirectories: {}
         ProjectReferences:
-            -   Id: afdaade0-975b-47c4-8cf9-2290ab6988a9
+            -   Id: 3f8008a0-f148-4332-8bcc-6fccb57b4599
                 Location: Play_TheGame.Linux/Play_TheGame.Linux.csproj
+                Type: Executable
+    -   Name: Android
+        Platform: Android
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Android
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: cd059b5c-f794-41c8-87eb-fa2dea983d5f
+                Location: Play_TheGame.Android/Play_TheGame.Android.csproj
                 Type: Executable
 ExplicitFolders: []
 Bundles: []

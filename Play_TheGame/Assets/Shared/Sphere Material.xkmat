@@ -1,5 +1,5 @@
 !MaterialAsset
-Id: 52d52653-497c-4ccd-be32-445326e8bd16
+Id: 9ba24d9e-5d45-4e8b-858c-86dac2ea7291
 SerializedVersion: {Xenko: 2.0.0.0}
 Tags: []
 Attributes:
@@ -17,6 +17,7 @@ Attributes:
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
         NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+        Environment: !MaterialSpecularMicrofacetEnvironmentGGXLUT {}
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: {}

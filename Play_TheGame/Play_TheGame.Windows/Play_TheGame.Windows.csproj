@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F7B2ED7-D5FF-4C8B-9871-918081692295}</ProjectGuid>
+    <ProjectGuid>{D647DE64-BF0C-4A9F-884A-0BEB13BE1802}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Play_TheGame</RootNamespace>
@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
-    <SiliconStudioPackageGuid>{fa04e425-7f19-4d54-a069-7078b19b9531}</SiliconStudioPackageGuid>
+    <SiliconStudioPackageGuid>{edbc9b49-cc40-4020-8ffb-d6428511bad6}</SiliconStudioPackageGuid>
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
@@ -100,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Play_TheGame.Game\Play_TheGame.Game.csproj">
-      <Project>{64a2fc6d-64bb-4978-aecb-655927111dcd}</Project>
+      <Project>{286dc9b0-e79b-4d35-90ff-2428f9adccc1}</Project>
       <Name>Play_TheGame.Game</Name>
       <Private>False</Private>
     </ProjectReference>
